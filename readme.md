@@ -1,16 +1,12 @@
-# YOUR_PACKAGE_NAME 🧙‍♂️
+# TEXT-MARKOV-CHAIN 🧙‍♂️
 
-YOUR_PACKAGE_SHORT_DESCRIPTION
+This npm library, text-markov-chain, empowers you to generate creative and random text using Markov chains. Markov chains model the probability of one word following another, resulting in text that often has a surprisingly similar coherence to the original source material.
 
 ## Features
 
 ## Installation
 
 ## Usage
-
-### Instance Methods:
-
-### Static Methods:
 
 ## API
 
