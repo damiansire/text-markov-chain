@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-async function readTxt(filePath: string) {
+const readTxt = async (filePath: string) => {
   try {
     const data = await fs.promises.readFile(filePath, "utf-8");
     return data;
@@ -8,6 +8,6 @@ async function readTxt(filePath: string) {
     console.error("Failed to read the file:", err);
     throw err;
   }
-}
+};
 
 module.exports = { readTxt };

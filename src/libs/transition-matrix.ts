@@ -1,4 +1,4 @@
-export default class TransitionMatrix {
+class TransitionMatrix {
   transitionMatrix: Record<string, Record<string, number>>;
   constructor() {
     this.transitionMatrix = {};
@@ -21,3 +21,5 @@ export default class TransitionMatrix {
     console.log(this.transitionMatrix);
   }
 }
+
+module.exports = { TransitionMatrix };
