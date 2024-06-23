@@ -17,7 +17,15 @@
     "prepublishOnly": "npm run build-test"
   },
   "keywords": [
-    "YOUR_PACKAGE_KEYWORDS"
+    "text generation",
+    "markov chain",
+    "markov model",
+    "natural language processing (NLP)",
+    "creative writing",
+    "random text",
+    "text synthesis",
+    "language model",
+    "probabilistic model",
   ],
   "author": "Damian Sire <damiansirecontacto@gmail.com> (https://damiansire.com)",
   "license": "ISC",
