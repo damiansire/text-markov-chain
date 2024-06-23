@@ -1,3 +1,5 @@
+const TextModule = require("../libs/text");
+
 interface StateData {
   states: { [to: string]: number };
   amount: number;
@@ -6,9 +8,21 @@ interface StateData {
 class TransitionMatrix {
   transitionMatrix: Record<string, StateData>;
   transitionMatrixProb: Record<string, Record<string, number>>;
-  constructor() {
+  constructor(text: string) {
     this.transitionMatrix = {};
     this.transitionMatrixProb = {};
+    this.fillTransitionMatrix(text);
+  }
+  fillTransitionMatrix(text: string) {
+    const cleanText = this.cleanText(text);
+    const words = cleanText.split(" ");
+    let prevWord;
+    for (let currentWord of words) {
+      if (prevWord) {
+        this.addElement(prevWord, currentWord);
+      }
+      prevWord = currentWord;
+    }
   }
   addElement(from: string, to: string) {
     if (!this.transitionMatrix[from]) {
@@ -35,6 +49,9 @@ class TransitionMatrix {
   }
   showMatrix() {
     console.log(this.transitionMatrix);
+  }
+  cleanText(txt: string) {
+    return TextModule.cleanText(txt);
   }
 }
 
