@@ -10,6 +10,7 @@
   ],
   "scripts": {
     "clean": "if exist dist (rmdir /s /q dist)",
+    "start": "npm run clean && tsc && node ./dist/index.js",
     "test": "jest --testMatch \"**/src/**/*.spec.ts\"",
     "build": "npm run clean && tsc",
     "build-test": "npm run build && jest --testMatch \"**/dist-test/builded-package.spec.ts\"",
